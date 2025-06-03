@@ -1,0 +1,87 @@
+/* style.css */
+:root[data-theme="dark"] {
+	--text: #ecebe9;
+	--background: #100f09;
+	--primary: #ddd79c;
+	--secondary: #877817;
+	--accent: #f6d813;
+    --accent-text: #161513;
+}
+
+:root[data-theme="light"] {
+	--text: #161513;
+	--background: #f6f5ef;
+	--primary: #635c22;
+	--secondary: #e8d978;
+	--accent: #ecce09;
+    --accent-text: #161513;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--text);
+	font-family: system-ui, sans-serif;
+	padding: 2rem;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+header { 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+button {
+	background-color: var(--accent);
+	color: var(--accent-text);
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 16px;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+.heart-button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
+.heart-shape {
+      width: 60px;
+      height: 54px;
+      position: relative;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+.heart-shape:before,
+.heart-shape:after {
+      content: "";
+      position: absolute;
+      left: 30px;
+      top: 0;
+      width: 30px;
+      height: 48px;
+      background: #e25555;
+      border-radius: 30px 30px 0 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+      transition: background 0.2s;
+    }
+.heart-shape:after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+.heart-button:hover .heart-shape {
+      transform: scale(1.1);
+    }

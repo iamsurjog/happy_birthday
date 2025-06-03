@@ -3,15 +3,30 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
-        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <title>HAPPY BIRTHDAY!!!</title>
+        <link rel="stylesheet"  href="style.css">   
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     </head>
     <body>
-        <div class="flex bg-blue-500">
-            <p>
-                test of this thingy
-            </p>
-        </div>
-    
+        <header>
+            <button class="heart-button" aria-label="Like" id="toggle-theme">
+                <span class="heart-shape"></span>
+            </button>
+        </header>
+        <main>
+            <button id="confetti-button">
+            <div class="box">
+                <p>HAPPY BIRTHDAY SUKI</p>
+            </div>
+            </button>
+            <br>
+            <canvas id="confetti-canvas" style="position: absolute; pointer-events: none;"></canvas>
+        </main>
+        <p>sorry couldn't make a better website I didn't get the time =( </p>
+        <br>
+        <p>Additional birthday gift: You can inspect the code and I can show you how to make light and dark themes in html</p>
+        <br>
+        <p>(press the heart if you haven't yet)</p>
+        <script src="script.js"></script>
     </body>
 </html>
